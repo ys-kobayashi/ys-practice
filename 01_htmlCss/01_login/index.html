@@ -13,22 +13,24 @@
 
 <body>
     <div class="container">
-        <form class="loginForm" action="" name="loginForm">
-            <label>
-                <p>ユーザー名</p>
-                <input type="text" name="name">
-            </label>
-            <label>
-                <p>パスワード</p>
-                <input type="password" name="password">
-            </label>
-            <label>
-                <input type="checkbox" name="remember">
-                <p>ログイン情報を記憶する</p>
-            </label>
-            <input type="submit" value="ログイン">
-            <p>パスワードを忘れた場合はこちら</p>
-        </form>
+        <div class="loginForm">
+            <form action="" method="POST" name="login">
+                <label>
+                    <p class="loginForm__inputTitle">ユーザー名</p>
+                    <input type="text" name="name">
+                </label>
+                <label>
+                    <p class="loginForm__inputTitle">パスワード</p>
+                    <input type="password" name="password">
+                </label>
+                <label>
+                    <input type="checkbox" name="remember">
+                    <p>ログイン情報を記憶する</p>
+                </label>
+                <input type="button" value="ログイン">
+                <a class="loginForm__forget" href="">パスワードを忘れた場合はこちら</a>
+            </form>
+        </div>
     </div>
 
 

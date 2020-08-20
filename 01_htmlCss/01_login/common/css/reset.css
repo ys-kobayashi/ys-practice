@@ -4,3 +4,13 @@
     box-sizing: border-box;
     font-size: inherit;
 }
+
+html {
+    font-size: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
