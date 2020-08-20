@@ -8,11 +8,263 @@
 	<title></title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 	<link rel="stylesheet" href="common/css/reset.css">
-	<link rel="stylesheet" href="common/css/style.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+	<div class="container">
+		<div class="logo">
+			<img src="https://img.phoenix.webcrew.co.jp/3940/piano-kaitori/images/step/header_logo.gif" alt="">
+		</div>
 
+		<form method="POST" action="">
+			<div class="info">
+				<table class="info__table">
+					<caption>ピアノの情報</caption>
+	
+					<tbody>
+						<tr>
+							<th class="isNecessary">ピアノのメーカー</th>
+							<td class="info__table--data-radio">
+								<label>
+									<input type="radio" name="meker" checked>
+									<p>ヤマハ</p>
+								</label>
+								<label>
+									<input type="radio" name="meker">
+									<p>カワイ</p>
+								</label>
+								<label>
+									<input type="radio" name="meker">
+									<p>その他</p>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">ピアノの種類</th>
+							<td class="info__table--data-radio">
+								<label>
+									<input type="radio" name="category" checked>
+									<p>アップライト<br>ピアノ(縦型)</p>
+								</label>
+								<label>
+									<input type="radio" name="category">
+									<p>グランドピアノ</p>
+								</label>
+								<label>
+									<input type="radio" name="category">
+									<p>電子ピアノ<br>エレクトーン</p>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">モデル名</th>
+							<td class="info__table--data-text">
+								<input type="text" placeholder="モデル名を入力してください" required>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">製造番号</th>
+							<td class="info__table--data-text">
+								<input type="text" placeholder="製造番号を入力してください" required>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">ペダルの本数</th>
+							<td class="info__table--data-radio">
+								<label>
+									<input type="radio" name="pedal" checked>
+									<p>2本</p>
+								</label>
+								<label>
+									<input type="radio" name="pedal">
+									<p>3本</p>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">ペダルの本数</th>
+							<td class="info__table--data-radio">
+								<label>
+									<input type="radio" name="color" checked>
+									<p>黒</p>
+								</label>
+								<label>
+									<input type="radio" name="color">
+									<p>白</p>
+								</label>
+								<label>
+									<input type="radio" name="color">
+									<p>茶(木目含む)</p>
+								</label>
+								<label>
+									<input type="radio" name="color">
+									<p>その他</p>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th class="isOptional">オプション機能</th>
+							<td class="info__table--data-checkbox">
+								<label>
+									<input type="checkbox" name="optFunc">
+									<p>自動演奏機能</p>
+								</label>
+								<label>
+									<input type="checkbox" name="optFunc">
+									<p>消音装置(ヘッドホンを使用できる装置)</p>
+								</label>
+								<a href="">消音装置とは</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="info">
+				<table class="info__table">
+					<caption>ピアノが置いてある建物の情報</caption>
+	
+					<tbody>
+						<tr>
+							<th class="isNecessary">住所</th>
+							<td class="info__table--address">
+								<div class="info__table--postalCode">
+									<p>〒</p>
+									<input type="text"" name="postalCode" required>
+									<a href="">郵便番号を調べる</a>
+								</div>
+								<p class="noteText">※郵便番号はハイフン(-)なしで入力してください。</p>
+								<select name="prefectures" required>
+									<option value="選択" hidden>選択</option>
+									<option value="北海道">北海道</option>
+									<option value="青森県">青森県</option>
+									<option value="岩手県">岩手県</option>
+									<option value="宮城県">宮城県</option>
+									<option value="秋田県">秋田県</option>
+									<option value="山形県">山形県</option>
+									<option value="福島県">福島県</option>
+									<option value="茨城県">茨城県</option>
+									<option value="栃木県">栃木県</option>
+									<option value="群馬県">群馬県</option>
+									<option value="埼玉県">埼玉県</option>
+									<option value="千葉県">千葉県</option>
+									<option value="東京都">東京都</option>
+									<option value="神奈川県">神奈川県</option>
+									<option value="新潟県">新潟県</option>
+									<option value="富山県">富山県</option>
+									<option value="石川県">石川県</option>
+									<option value="福井県">福井県</option>
+									<option value="山梨県">山梨県</option>
+									<option value="長野県">長野県</option>
+									<option value="岐阜県">岐阜県</option>
+									<option value="静岡県">静岡県</option>
+									<option value="愛知県">愛知県</option>
+									<option value="三重県">三重県</option>
+									<option value="滋賀県">滋賀県</option>
+									<option value="京都府">京都府</option>
+									<option value="大阪府">大阪府</option>
+									<option value="兵庫県">兵庫県</option>
+									<option value="奈良県">奈良県</option>
+									<option value="和歌山県">和歌山県</option>
+									<option value="鳥取県">鳥取県</option>
+									<option value="島根県">島根県</option>
+									<option value="岡山県">岡山県</option>
+									<option value="広島県">広島県</option>
+									<option value="山口県">山口県</option>
+									<option value="徳島県">徳島県</option>
+									<option value="香川県">香川県</option>
+									<option value="愛媛県">愛媛県</option>
+									<option value="高知県">高知県</option>
+									<option value="福岡県">福岡県</option>
+									<option value="佐賀県">佐賀県</option>
+									<option value="長崎県">長崎県</option>
+									<option value="熊本県">熊本県</option>
+									<option value="大分県">大分県</option>
+									<option value="宮崎県">宮崎県</option>
+									<option value="鹿児島県">鹿児島県</option>
+									<option value="沖縄県">沖縄県</option>
+								</select>
+								<input type="text" name="detailAddress" placeholder="新宿区新宿2-1-2" required>
+								<input type="text" name="buildingAddress" placeholder="白鳥ビル7F">
+								<input type="text" name="buildingName" placeholder="株式会社Y's内 Cafe Y's">
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">建物タイプと階数</th>
+							<td class="info__table--data-selects">
+								<select name="buildingType" required>
+									<option value="選択" hidden>選択</option>
+									<option value="一戸建て">一戸建て</option>
+									<option value="マンション">マンション</option>
+									<option value="アパート">アパート</option>
+									<option value="ビル">ビル</option>
+									<option value="公共の建物">公共の建物</option>
+									<option value="その他">その他</option>
+								</select>
+								<select name="floor" required>
+									<option value="選択" hidden>選択</option>
+									<option value="地下2階">地下2階</option>
+									<option value="地下1階">地下1階</option>
+									<option value="1階">1階</option>
+									<option value="2階">2階</option>
+									<option value="3階">3階</option>
+									<option value="4階">4階</option>
+									<option value="5階">5階</option>
+									<option value="6階">6階</option>
+									<option value="7階">7階</option>
+									<option value="8階">8階</option>
+									<option value="9階">9階</option>
+									<option value="10階">10階</option>
+									<option value="11階以上">11階以上</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th class="isNecessary">エレベーター</th>
+							<td class="info__table--data-radio">
+								<label>
+									<input type="radio" name="elevator" checked>
+									<p>あり</p>
+								</label>
+								<label>
+									<input type="radio" name="elevator">
+									<p>なし</p>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th class="isOptional">建物への搬入方法</th>
+							<td class="info__table--data-radio carry">
+								<label>
+									<input type="radio" name="carry" checked>
+									<p>階段</p>
+								</label>
+								<label>
+									<input type="radio" name="carry">
+									<p>エレベーター</p>
+								</label>
+								<label>
+									<input type="radio" name="carry">
+									<p>クレーン使用</p>
+								</label>
+								<label>
+									<input type="radio" name="carry">
+									<p>その他</p>
+								</label>
+								<label>
+									<input type="radio" name="carry">
+									<p>わからない</p>
+								</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</form>
+
+	</div>
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="common/js/script.js"></script>

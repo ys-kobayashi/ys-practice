@@ -1,0 +1,211 @@
+@charset "UTF-8";
+.container {
+  width: 100%;
+  max-width: 920px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.info__table {
+  width: 100%;
+}
+
+.info__table caption, .info__table th, .info__table td {
+  padding: 10px;
+}
+
+.info__table caption {
+  background-color: #e8e8e8;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.info__table tr {
+  display: flex;
+  border: 1px solid #ccc;
+  font-size: 1.3rem;
+}
+
+.info__table tr:not(:first-of-type) {
+  border-top: 1px solid transparent;
+}
+
+.info__table tr th {
+  flex: 0.24;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info__table tr th.isNecessary {
+  background-color: #FFEAEA;
+}
+
+.info__table tr th.isNecessary::after {
+  content: "必須";
+  padding: 4px;
+  background-color: red;
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.info__table tr th.isOptional {
+  background-color: white;
+}
+
+.info__table tr th.isOptional::after {
+  content: "任意";
+  padding: 4px;
+  background-color: white;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.info__table tr th.isOptional::after {
+  border: 1px solid #000;
+}
+
+.info__table tr td {
+  flex: 0.76;
+  border-left: 1px solid #ccc;
+}
+
+.info__table tr td.info__table--data-radio {
+  display: flex;
+  align-items: center;
+}
+
+.info__table tr td.info__table--data-radio label {
+  flex: 0.25;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.info__table tr td.info__table--data-radio label:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.info__table tr td.info__table--data-radio label p {
+  margin-left: 8px;
+}
+
+.info__table tr td.info__table--data-radio.carry {
+  flex-wrap: wrap;
+}
+
+.info__table tr td.info__table--data-radio.carry label {
+  flex-grow: 0.3;
+  flex-basis: 30%;
+}
+
+.info__table tr td.info__table--data-radio.carry label:nth-of-type(4) {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.info__table tr td.info__table--data-radio.carry label:nth-of-type(5) {
+  margin-top: 10px;
+}
+
+.info__table tr td.info__table--data-text input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.info__table tr td.info__table--data-checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+.info__table tr td.info__table--data-checkbox:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.info__table tr td.info__table--data-checkbox p {
+  margin-left: 8px;
+}
+
+.info__table tr td.info__table--data-checkbox > a {
+  display: inline-block;
+  color: #0085c9;
+  text-decoration: underline;
+  margin-top: 4px;
+  font-size: 1.1rem;
+}
+
+.info__table tr td.info__table--address {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__table tr td.info__table--address .info__table--postalCode {
+  display: flex;
+  align-items: center;
+}
+
+.info__table tr td.info__table--address .info__table--postalCode input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.info__table tr td.info__table--address .info__table--postalCode a {
+  display: inline-block;
+  color: #0085c9;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.info__table tr td.info__table--address .noteText {
+  margin: 4px 0 0 22px;
+  font-size: 1.1px;
+}
+
+.info__table tr td.info__table--address > select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 40%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.info__table tr td.info__table--address > input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.info__table tr td.info__table--data-selects {
+  display: flex;
+  align-items: center;
+}
+
+.info__table tr td.info__table--data-selects select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 40%;
+  padding: 10px;
+}
+
+.info__table tr td.info__table--data-selects select:not(:first-of-type) {
+  margin-left: 10px;
+}

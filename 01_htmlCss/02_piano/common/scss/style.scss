@@ -1,0 +1,211 @@
+@mixin formPartsBorder {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@mixin necOrOpt($content, $bgcolor, $aftBgcolor, $aftColor) {
+  background-color: $bgcolor;
+
+  &::after {
+    content: $content;
+    padding: 4px;
+    background-color: $aftBgcolor;
+    color: $aftColor;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
+@mixin linkInTable {
+  display: inline-block;
+  color: #0085c9;
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  max-width: 920px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.info {
+  margin-top: 30px;
+
+  &__table {
+    width: 100%;
+
+    caption, th, td {
+      padding: 10px;
+    }
+
+    caption {
+      background-color: #e8e8e8;
+      border: 1px solid #ccc;
+      border-bottom: 1px solid transparent;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    tr {
+      display: flex;
+      border: 1px solid #ccc;
+      font-size: 1.3rem;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid transparent;
+      }
+
+      th {
+        flex: 0.24;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.isNecessary {
+          @include necOrOpt("必須", #FFEAEA, red, white);
+        }
+
+        &.isOptional {
+          @include necOrOpt("任意", white, white, inherit);
+
+          &::after {
+            border: 1px solid #000;
+          }
+        }
+      }
+
+      td {
+        flex: 0.76;
+        border-left: 1px solid #ccc;
+
+        &.info__table--data-radio {
+          display: flex;
+          align-items: center;
+
+          label {
+            flex: 0.25;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fafafa;
+            @include formPartsBorder();
+
+            &:not(:first-of-type){
+              margin-left: 10px;
+            }
+
+            p {
+              margin-left: 8px;
+            }
+          }
+
+          &.carry {
+            flex-wrap: wrap;
+
+            label {
+              flex-grow: 0.3;
+              flex-basis: 30%;
+
+              &:nth-of-type(4){
+                margin-top: 10px;
+                margin-left: 0;
+              }
+
+              &:nth-of-type(5){
+                margin-top: 10px;
+              }
+            }
+
+          }
+        }
+      
+        &.info__table--data-text {
+          input {
+            width: 60%;
+            padding: 10px;
+            @include formPartsBorder();
+          }
+        }
+
+        &.info__table--data-checkbox {
+          label {
+            display: flex;
+            align-items: center;
+          }
+
+          &:not(:first-of-type){
+            margin-left: 10px;
+          }
+
+          p {
+            margin-left: 8px;
+          }
+
+          & > a {
+            @include linkInTable();
+            margin-top: 4px;
+            font-size: 1.1rem;
+          }
+        }
+
+        &.info__table--address {
+          display: flex;
+          flex-direction: column;
+          .info__table--postalCode {
+            display: flex;
+            align-items: center;
+
+            input {
+              @include formPartsBorder();
+              margin-left: 10px;
+              padding: 10px;
+            }
+
+            a {
+              @include linkInTable();
+              display: inline-block;
+              margin-left: 10px;
+            }
+          }
+
+          .noteText {
+            margin: 4px 0 0 22px;
+            font-size: 1.1px;
+          }
+
+          & > select {
+            @include formPartsBorder();
+            width: 40%;
+            margin-top: 10px;
+            padding: 10px;
+          }
+
+          & > input {
+            @include formPartsBorder();
+            width: 80%;
+            margin-top: 10px;
+            padding: 10px;
+          }
+        }
+
+        &.info__table--data-selects {
+          display: flex;
+          align-items: center;
+
+          select {
+            @include formPartsBorder();
+            width: 40%;
+            padding: 10px;
+
+            &:not(:first-of-type) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
