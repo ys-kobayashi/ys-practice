@@ -1,0 +1,81 @@
+.bookInfo {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.bookInfo__title {
+  font-size: 2.4rem;
+}
+
+.bookInfo__main {
+  margin-top: 30px;
+}
+
+.bookInfo__main h2 {
+  font-size: 2rem;
+}
+
+.bookInfo__main--beginning {
+  font-size: 1.6rem;
+}
+
+.bookInfo__main--beginning rt {
+  font-size: 1rem;
+}
+
+.bookInfo__sup {
+  margin-top: 30px;
+}
+
+.bookInfo__sup h3 {
+  font-size: 1.8rem;
+}
+
+.bookInfo__sup h4 {
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+
+.bookInfo__sup--bookList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.bookInfo__sup--book {
+  display: block;
+  flex-basis: 160px;
+}
+
+.bookInfo__sup--book img {
+  width: 100%;
+  height: auto;
+}
+
+.bookInfo__contact {
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+
+.bookInfo__contact a {
+  color: #0085c9;
+  text-decoration: underline;
+}
+
+span.strong {
+  font-weight: bold;
+}
+
+span.italic {
+  display: inline-block;
+  margin: 0 4px;
+  transform: skewX(-10deg);
+}
+
+span.yellow {
+  margin: 0 4px;
+  padding: 2px;
+  background-color: yellow;
+}

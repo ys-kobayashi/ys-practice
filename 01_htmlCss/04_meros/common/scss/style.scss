@@ -1,0 +1,83 @@
+.bookInfo {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+
+  &__title {
+    font-size: 2.4rem;
+  }
+
+  &__main {
+    margin-top: 30px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    &--beginning {
+      font-size: 1.6rem;
+
+      rt {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__sup {
+    margin-top: 30px;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    h4 {
+      margin-top: 20px;
+      font-size: 1.6rem;
+    }
+
+    &--bookList {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &--book {
+      display: block;
+      flex-basis: 160px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__contact {
+    margin-top: 30px;
+    font-size: 1.3rem;
+
+    a {
+      color: #0085c9;
+      text-decoration: underline;
+    }
+  }
+}
+
+span {
+  &.strong {
+    font-weight: bold;
+  }
+
+  &.italic {
+    display: inline-block;
+    margin: 0 4px;
+    transform: skewX(-10deg);
+  }
+
+  &.yellow {
+    margin: 0 4px;
+    padding: 2px;
+    background-color: yellow;
+  }
+}
