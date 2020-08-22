@@ -1,0 +1,185 @@
+@mixin tableColor($bdColor, $itemHl, $priceHl) {
+  .tableRow__table {
+    border: 1px solid $bdColor;
+
+    th {
+      background-color: $bdColor;
+      color: #fff;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px dashed $bdColor;
+
+        &.tableRow__table--bdDouble {
+          border-bottom: 3px double $bdColor;
+        }
+
+        &.tableRow__table--bdSingle {
+          border-bottom: 1px solid $bdColor;
+        }
+
+        &:last-of-type {
+          background-color: #CFE2F3;
+        }
+
+        td {
+          &:not(:first-of-type){
+            border-left: 1px solid $bdColor;
+          }
+
+          &.tableRow__table--minus {
+            color: #FF0000;
+          }
+          }
+      }
+    }
+
+    &--itemHl {
+      background-color: $itemHl;
+    }
+
+    &--priceHl {
+      background-color: $priceHl;
+    }
+  }
+}
+
+
+
+.container {
+  width: 960px;
+  padding: 30px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2.4rem;
+    filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.4));
+  }
+
+  .tableRow {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+
+    &__left, &__right {
+      width: 48%;
+    }
+
+    &__table {
+      width: 100%;
+      font-size: 1.2rem;
+
+      caption {
+        font-size: 1.6rem;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        white-space: nowrap;
+      }
+
+      tbody {
+        &.alignAdjust {
+          td {
+            text-align: right;
+          }
+        }
+      }
+
+      th, td {
+        padding: 2px 4px;
+      }
+
+      th {
+        text-align: center;
+
+        &:nth-of-type(1){
+          width: 40%;
+        }
+
+        &:nth-of-type(n + 2){
+          width: 20%;
+        }
+      }
+
+      td {
+        &:nth-of-type(3){
+          text-align: center;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4){
+          text-align: right;
+        }
+
+        &.bubble {
+          position: relative;
+
+          &::before {
+            content: "5,000円の\A増額申請あり";
+            white-space: pre;
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%);
+            padding: 10px 20px 10px 10px;
+            background-color: #FFF2CC;
+            border: 1px solid #000;
+            font-size: 1rem;
+            border-radius: 6px;
+            text-align: left;
+          }
+
+          &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            right: 53px;
+            transform: translateY(-50%) rotate(45deg);
+            background-color: #FFF2CC;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+          }
+        }
+
+        &.sadFace {
+          position: relative;
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+    }
+
+    &__left {
+      @include tableColor(#9900FF, null, #FCE5CD);
+    }
+
+    &__right {
+      @include tableColor(#FF0000, #F4CCCC, #FCE5CD);
+    }
+  }
+
+  .menu {
+    margin-top: 50px;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        font-size: 1.2rem;
+        color: #0085c9;
+        text-decoration: underline;
+      }
+    }
+  }
+}

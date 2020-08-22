@@ -1,0 +1,201 @@
+@charset "UTF-8";
+.container {
+  width: 960px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-size: 2.4rem;
+  filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.4));
+}
+
+.container .tableRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .tableRow:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.container .tableRow__left, .container .tableRow__right {
+  width: 48%;
+}
+
+.container .tableRow__table {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.container .tableRow__table caption {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+}
+
+.container .tableRow__table tbody.alignAdjust td {
+  text-align: right;
+}
+
+.container .tableRow__table th, .container .tableRow__table td {
+  padding: 2px 4px;
+}
+
+.container .tableRow__table th {
+  text-align: center;
+}
+
+.container .tableRow__table th:nth-of-type(1) {
+  width: 40%;
+}
+
+.container .tableRow__table th:nth-of-type(n + 2) {
+  width: 20%;
+}
+
+.container .tableRow__table td:nth-of-type(3) {
+  text-align: center;
+}
+
+.container .tableRow__table td:nth-of-type(2), .container .tableRow__table td:nth-of-type(4) {
+  text-align: right;
+}
+
+.container .tableRow__table td.bubble {
+  position: relative;
+}
+
+.container .tableRow__table td.bubble::before {
+  content: "5,000円の\A増額申請あり";
+  white-space: pre;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  padding: 10px 20px 10px 10px;
+  background-color: #FFF2CC;
+  border: 1px solid #000;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.container .tableRow__table td.bubble::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 53px;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #FFF2CC;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.container .tableRow__table td.sadFace {
+  position: relative;
+}
+
+.container .tableRow__table td.sadFace::after {
+  content: "";
+}
+
+.container .tableRow__left .tableRow__table {
+  border: 1px solid #9900FF;
+}
+
+.container .tableRow__left .tableRow__table th {
+  background-color: #9900FF;
+  color: #fff;
+}
+
+.container .tableRow__left .tableRow__table tbody tr {
+  border-bottom: 1px dashed #9900FF;
+}
+
+.container .tableRow__left .tableRow__table tbody tr.tableRow__table--bdDouble {
+  border-bottom: 3px double #9900FF;
+}
+
+.container .tableRow__left .tableRow__table tbody tr.tableRow__table--bdSingle {
+  border-bottom: 1px solid #9900FF;
+}
+
+.container .tableRow__left .tableRow__table tbody tr:last-of-type {
+  background-color: #CFE2F3;
+}
+
+.container .tableRow__left .tableRow__table tbody tr td:not(:first-of-type) {
+  border-left: 1px solid #9900FF;
+}
+
+.container .tableRow__left .tableRow__table tbody tr td.tableRow__table--minus {
+  color: #FF0000;
+}
+
+.container .tableRow__left .tableRow__table--priceHl {
+  background-color: #FCE5CD;
+}
+
+.container .tableRow__right .tableRow__table {
+  border: 1px solid #FF0000;
+}
+
+.container .tableRow__right .tableRow__table th {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.container .tableRow__right .tableRow__table tbody tr {
+  border-bottom: 1px dashed #FF0000;
+}
+
+.container .tableRow__right .tableRow__table tbody tr.tableRow__table--bdDouble {
+  border-bottom: 3px double #FF0000;
+}
+
+.container .tableRow__right .tableRow__table tbody tr.tableRow__table--bdSingle {
+  border-bottom: 1px solid #FF0000;
+}
+
+.container .tableRow__right .tableRow__table tbody tr:last-of-type {
+  background-color: #CFE2F3;
+}
+
+.container .tableRow__right .tableRow__table tbody tr td:not(:first-of-type) {
+  border-left: 1px solid #FF0000;
+}
+
+.container .tableRow__right .tableRow__table tbody tr td.tableRow__table--minus {
+  color: #FF0000;
+}
+
+.container .tableRow__right .tableRow__table--itemHl {
+  background-color: #F4CCCC;
+}
+
+.container .tableRow__right .tableRow__table--priceHl {
+  background-color: #FCE5CD;
+}
+
+.container .menu {
+  margin-top: 50px;
+}
+
+.container .menu h2 {
+  font-size: 1.6rem;
+}
+
+.container .menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .menu__list a {
+  font-size: 1.2rem;
+  color: #0085c9;
+  text-decoration: underline;
+}
