@@ -145,11 +145,18 @@
           }
         }
 
-        &.sadFace {
+        span {
           position: relative;
 
           &::after {
             content: "";
+            position: absolute;
+            top: -24px;
+            right: 60px;
+            width: 24px;
+            height: 24px;
+            background-image: url(./common/img/sad.png);
+            background-size: contain;
           }
         }
       }

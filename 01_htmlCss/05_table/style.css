@@ -95,12 +95,19 @@
   border-right: 1px solid #000;
 }
 
-.container .tableRow__table td.sadFace {
+.container .tableRow__table td span {
   position: relative;
 }
 
-.container .tableRow__table td.sadFace::after {
+.container .tableRow__table td span::after {
   content: "";
+  position: absolute;
+  top: -24px;
+  right: 60px;
+  width: 24px;
+  height: 24px;
+  background-image: url(./common/img/sad.png);
+  background-size: contain;
 }
 
 .container .tableRow__left .tableRow__table {
