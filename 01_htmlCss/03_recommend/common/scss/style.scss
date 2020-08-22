@@ -1,0 +1,106 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .recommendWrapper {
+    flex-grow: 100;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .recommend {
+    width: 100%;
+    max-width: 960px;
+    min-width: 192px;
+    padding: 30px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+    &__leadText {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #FF9900;
+    }
+
+    &__contents {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    &__content {
+      flex-basis: 160px;
+      height: 300px;
+      font-size: 1.4rem;
+    }
+
+    &__itemImg {
+      width: 100%;
+      height: 44%;
+      border: 1px solid #000;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__itemName {
+      display: block;
+      margin-top: 4px;
+      color: #1A73E8;
+    }
+
+    &__review {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+
+      &--star {
+        color: #F1C232;
+        font-size: 1.6rem;
+      }
+
+      &--value {
+        flex-grow: 2;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+    }
+
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      color: #FF0000;
+
+      &.prime::after {
+        content: "プライム";
+        font-weight: bold;
+        color: #1A73E8;
+      }
+    }
+  }
+
+  footer {
+    flex-shrink: 10000;
+    flex-basis: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

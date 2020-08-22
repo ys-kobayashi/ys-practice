@@ -1,0 +1,106 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container .recommendWrapper {
+  flex-grow: 100;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.container .recommend {
+  width: 100%;
+  max-width: 960px;
+  min-width: 192px;
+  padding: 30px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.container .recommend__leadText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FF9900;
+}
+
+.container .recommend__contents {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.container .recommend__content {
+  flex-basis: 160px;
+  height: 300px;
+  font-size: 1.4rem;
+}
+
+.container .recommend__itemImg {
+  width: 100%;
+  height: 44%;
+  border: 1px solid #000;
+}
+
+.container .recommend__itemImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container .recommend__itemName {
+  display: block;
+  margin-top: 4px;
+  color: #1A73E8;
+}
+
+.container .recommend__review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.container .recommend__review--star {
+  color: #F1C232;
+  font-size: 1.6rem;
+}
+
+.container .recommend__review--value {
+  flex-grow: 2;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.container .recommend__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  color: #FF0000;
+}
+
+.container .recommend__price.prime::after {
+  content: "プライム";
+  font-weight: bold;
+  color: #1A73E8;
+}
+
+.container footer {
+  flex-shrink: 10000;
+  flex-basis: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
