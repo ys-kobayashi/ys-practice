@@ -225,7 +225,7 @@
   align-items: center;
 }
 
-.info__table tr td.info__table--data-name > label:nth-child(n + 2) {
+.info__table tr td.info__table--data-name > label:nth-child(n + 3) {
   margin-top: 10px;
 }
 
