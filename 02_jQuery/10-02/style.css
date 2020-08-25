@@ -1,0 +1,69 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+header {
+  padding: 30px 0;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+header ul li:not(:first-of-type)::before {
+  content: ">";
+  margin: 0 8px;
+}
+
+.contents {
+  font-size: 1.6rem;
+}
+
+.birth {
+  padding: 30px 0;
+}
+
+.birth__selecters {
+  display: flex;
+  align-items: center;
+}
+
+.birth__selecters select {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.birth__selecters select:not(:first-of-type) {
+  margin-left: 1em;
+}
+
+.birth__selecters p {
+  margin-left: 0.4em;
+}
+
+.birth__button {
+  margin-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.birth__button button {
+  padding: 8px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+
+.birth__button button:hover {
+  cursor: pointer;
+}
+
+.output {
+  font-size: 3rem;
+  font-weight: bold;
+}
